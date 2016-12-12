@@ -29,15 +29,7 @@
         <section class="home" id="home">
             <article class="home-browsers">
                 <div class="sublime">
-                    <article class="browser">
-                        <article class="browser-header">
-                            <div class="button-container">
-                                <div class="close-button"></div>
-                                <div class="minimize-button"></div>
-                                <div class="fullsize-button"></div>
-                            </div>
-                        </article>
-                    </article>
+                    <img src="graphs/home_notebook.png" />
                 </div>
                 <div class="terminal">
                     <article class="browser">
@@ -119,8 +111,12 @@
     <section class="future" id="future">
     		<div class="container">
     			<h2 class="title">Future Work</h2>
-    				<p class="explanation">Lorem ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum</p>
-    					<img class="illustration" src=../assets/img/self-shot-1.jpg />
+    				<p class="explanation">There are many avenues for future work. For one, a more sophisticated model might consider the implications of <span class='bold'>biased training data</span>. One of the greatest advantages of grading essays using a computer in lieu of a human is that computers aren't subject to same psychological biases that humans are — or are they? When we train our l1-regularized linear model on essays graded by humans, we "learn" the biases inherent in the grading system.</p>
+    				<p class="explanation">What kinds of biases are we talking about? There are many: research <a href='https://etd.lib.msu.edu/islandora/object/etd%3A1970/datastream/OBJ/view'>suggests</a> that typed essays tend to get better grades than handwritten essays, even when the text is the exact same for both! Similarly, human judgement is riddled with biases: we know that judges <a href='http://www.pnas.org/content/108/17/6889'>give more lenient sentences</a> to criminals in the morning and early afternoon — right after breakfast and lunch, respectively. When teachers grade students' essays, they naturally encode their biases directly into the grade, albeit unintentionally. How can we correct for biases like this?</p>
+    					<img class="illustration" src=graphs/no_bias.png />
+    				<p class="explanation">Without changing the way that teachers grade, we'll have trouble getting our hands on unbiased data. On the other hand, we may be able to prejudice our model using <span class='bold'>priors</span>. If we know that a certain bias is pervasive and that it causes grades to go up, for instance, we can include a prior in our model which controls for this unnencessary shift up. We may have to think intuitively about how a certain bias might manifest itself, or we can collect more granular data (e.g. the time of day at which the essay was graded) to do more rigorous analysis of the effects of bias.</p>
+    				<p class="explanation">Another improvement to our model might involve pulling out <span class='bold'>more sophisticated features</span>. For instance, one property of an essay which is likely to be valuable is its gramaticallity. There are certainly many ways to calculate an essay's grammaticallity (for instance, see <a target='_blank' href='graphs/paper.pdf'>this</a> paper by the ETS, which uses ridge regression). One simpler approach might involve calculating the proportion of mispelled words (by using a dictionary, for instance). Either way, pulling out grammaticallity would surely help improve the accuracy of our model.</p>
+    				<p class="explanation">Lastly, we might also consider swapping our regression model for a <span class='bold'>neural net</span>. There are many <a href='https://da352.user.srcf.net/public_uploads/acl2016.pdf'>examples of models</a> which have used Long-Short Term Memory networks to solve the problem of automatic essay scoring. <span class='bold'>That said, even the most sophisticated approaches involving neural networks seem to yield accuracies that are no better than our regularized LASSO regression.</span></p>
     		</div>
     </section>
     
