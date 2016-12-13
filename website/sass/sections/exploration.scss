@@ -1,0 +1,35 @@
+ .exploration {
+	/*height: 100%;*/
+	width: 100%;
+	min-height: 724px;
+	background-color: #A1BABA;
+	overflow: hidden;
+
+	.container {
+		width: 750px;
+		margin: auto auto 50px auto;
+
+		.title {
+			font-family: 'Avenir Heavy Italic', sans-serif;
+			font-size: 64px;
+			color: #414141;
+			text-align: center;
+			margin-top: 130px;
+		}
+
+		.explanation {
+			margin: 10px 0 10px 0;
+			line-height: 19px;
+			font-family: 'Avenir Regular', sans-serif;
+
+			.bold {
+				font-weight: bold;
+			}
+		}
+
+		.illustration {
+			display: flex;
+			margin: 30px auto 30px auto;
+		}
+	}	
+}

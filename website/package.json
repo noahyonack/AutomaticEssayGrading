@@ -1,0 +1,32 @@
+{
+  "name": "noah-yonack-personal-website",
+  "version": "1.0.0",
+  "description": "a personal website, built with all the latest stuff",
+  "author": "Noah Yonack <noah.yonack@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/noahyonack"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer-core": "^6.0.1",
+    "grunt": "^1.0.1",
+    "grunt-assemble": "^0.4.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-requirejs": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-endline": "^0.5.0",
+    "grunt-express": "^1.4.1",
+    "grunt-html-prettyprinter": "^1.5.0",
+    "grunt-parallel": "^0.5.1",
+    "grunt-postcss": "^0.8.0",
+    "inherits": "^2.0.1",
+    "js-yaml": "^3.6.1",
+    "jshint-stylish": "^2.0.1",
+    "load-grunt-tasks": "^3.2.0",
+    "prettify": "^0.1.7"
+  },
+  "license": "MIT"
+}

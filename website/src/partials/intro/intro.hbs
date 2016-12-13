@@ -1,0 +1,13 @@
+<section class="intro" id="intro">
+	{{#with intro}}
+		<div class="container">
+			<h2 class="title">{{this.title}}</h2>
+			{{#each this.paragraphs}}
+				<p class="explanation">{{{this.text}}}</p>
+				{{#if this.image}}
+					<img class="illustration" width={{this.width}} src={{this.image}} />
+				{{/if}}
+			{{/each}}
+		</div>
+	{{/with}}
+</section>

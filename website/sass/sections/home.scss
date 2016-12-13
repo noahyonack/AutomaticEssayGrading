@@ -1,0 +1,141 @@
+.home {
+	height: 100%;
+	width: 100%;
+	min-height: 724px;
+	background-color: black;
+	overflow: hidden;
+	position: relative;
+
+	.home-browsers {
+		$browser-height-offset: 100px;
+		$browser-width-offset: 200px;
+		margin: 110px auto 0 auto;
+		position: relative;
+		height: $browser-height + $browser-height-offset;
+		width: $browser-width + $browser-width-offset;
+
+		.sublime {
+			position: absolute;
+
+			.side-bar {
+				$sublime-sidebar-width: 84px !global;
+				width: $sublime-sidebar-width;
+				background-color: #1A243A;
+				float: left;
+				height: $browser-height - $browser-header-height;
+				border-right: 1px solid #979797;
+				border-bottom-left-radius: 4px;
+				border-top-left-radius: 4px;
+
+				.file-list {
+					@include sublime-indentations;
+
+					.file-list-item-container {
+						margin-top: 2px;
+						padding: 3px 0px 3px 0px;
+					
+						.file-list-item {
+							color: #FFFFFF;
+							cursor: pointer;
+							font-size: 10px;
+							font-family: 'Avenir Regular';
+							position: relative;
+						}
+
+						.expanded {
+							&:before {
+								margin: 4px 3px 0px 3px;
+								float: left;
+								width: 0;
+								height: 0;
+								content: '';
+								border: 3px solid transparent;
+								border-top: 3px solid #FFFFFF;
+							}
+						}
+
+						.notExpanded {
+							&:before {
+								margin: 2px 0px 0px 4px;
+								float: left;
+								width: 0;
+								height: 0;
+								content: '';
+								border: 3px solid transparent;
+								border-left: 3px solid #FFFFFF;
+							};
+						}
+
+						&.selected {
+							background-color: #979797;
+						}
+					}
+				}
+			}
+
+			.single-file {
+				@include code-blocks;
+				border-bottom-right-radius: 4px;
+				border-top-right-radius: 4px;
+				float: left;
+				/* subtract 1 to account for border size */
+				width: $browser-width - $sublime-sidebar-width - 1px;
+				height: $browser-height - $browser-header-height;
+			}
+
+		}
+
+		.terminal {
+			position: absolute;
+    	top: $browser-height-offset;
+    	left: $browser-width-offset;
+    	color: #00FF00;
+    	font-family: 'Avenir', sans-serif;
+
+    	.terminal-text {
+    		font-size: 13px;
+    		margin: 6px;
+    		width: 100%;
+    		clear: both;
+    	}
+
+    	.terminal-column {
+    		float: left;
+    		padding-right: 10px;
+    		margin-bottom: 5px;
+    	}
+		}
+
+	}
+
+	.title {
+		color: white;
+		text-align: center;
+		margin-top: 40px;
+
+		.headline {
+			font-family: 'Avenir Next Bold Italic', sans-serif;
+			font-size: 45px;
+			margin-bottom: 10px;
+		}
+
+		.subheadline {
+			font-family: 'Avenir Regular', sans-serif;
+			font-size: 30px;
+		}
+	}
+
+	.down-arrow {
+		cursor: pointer;
+		height: 29px;
+		width: 56px;
+		background: url(../assets/img/down-arrow.png) 50% 50% no-repeat;
+		content: '';
+		position: absolute;
+		margin: 0 auto;
+		bottom: 10px;
+		left: 0;
+		right: 0;
+	}
+
+}

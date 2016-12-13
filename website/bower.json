@@ -1,0 +1,20 @@
+{
+  "name": "noah-yonack-personal-website",
+  "version": "1.0.0",
+  "authors": [
+    "Noah Yonack <noah.yonack@gmail.com>"
+  ],
+  "description": "a personal website, built with all the latest stuff",
+  "license": "MIT",
+  "homepage": "noahyonack.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "almond": "~0.3.1"
+  }
+}

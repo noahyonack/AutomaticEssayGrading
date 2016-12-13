@@ -1,0 +1,31 @@
+{
+	"title": "Data Exploration",
+	"paragraphs": [
+		{
+			"text": "As mentioned, our essays come from 8 different sets, each of which has a different score range. As you can see from the histogram below, each essay set has roughly the same prevalence within the dataset, except for essay set 8.",
+			"image": "../../graphs/essay_set_distribution.png",
+			"width": "500px"
+		},
+		{
+			"text": "We began the exploration phase of the data-science process by looking at fundamental properties of the dataset: histograms of essay scores, scatterplots between essay length and score, and scatterplots between the number of unique words per essay and score. Finding a relationship between these basic features and our response variable could mean better predictions when we build our model later down the road."
+		},
+		{
+			"text": "We first plotted a histogram of all essay scores. While some essay sets are graded on scales from, say, 0 - 5, others have scales that go up to 30 (and, when a student gets a score of 30 from both independent graders, her domain1_score is 60). Notice in the histogram below the multiple local modes — ones at ~4, ~9, ~40. This is because we are plotting the distribution of all scores from all essay sets. Because we're seeing multiple 'smaller' distributions on the same axis, we know that including <span class='bold'>essay_set</span> in our model will likely help us predict score by limiting the range of our predicted response.",
+			"image": "../../graphs/essay_score_hist.png",
+			"width": "500px"
+		},
+		{
+			"text": "We also looked at the relationship between essay length and our response variable. Notice the multiple `fingers` in the scatterplot below, indicating at least moderate-strength correlations between essay length and score.",
+			"image": "../../graphs/essay_length_score_scatter.png",
+			"width": "500px"
+		},
+		{
+			"text": "Breaking up this scatterplot into its constituent parts (i.e. by essay set), these correlations become more obvious. For instance, notice the relationship between essay length vs. score for essay set 1. These two variables have a Spearman's rho correlation coefficient of 0.80, which is considered to be strong. Other essay sets have similar scatterplots and correlation coefficients.",
+			"image": "../../graphs/essay_length_score_scatter_1.png",
+			"width": "500px"
+		},
+		{
+			"text": "Lastly, we also looked at essay score as a function of the number of unique words in that essay. Unsurprisingly, essay length is an almost perfect proxy of the number of unique words per essay, meaning the correlation between the two variables is almost 1. Thus, using both essay length and the number of unique words as features in our model is redundant."
+		}
+	]
+}
