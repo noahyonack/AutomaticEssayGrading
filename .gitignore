@@ -1,3 +1,4 @@
 datasets/*
 Training_Materials/*
 website/*
+.ipynb_checkpoints/*
