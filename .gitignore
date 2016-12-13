@@ -2,3 +2,5 @@ datasets/*
 Training_Materials/*
 website/*
 .ipynb_checkpoints/*
+.DS_Store
+.swp
