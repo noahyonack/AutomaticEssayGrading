@@ -125,6 +125,7 @@
     				<p class="explanation"><span class='bold'>Our accuracy metric - Spearman’s rho correlation: </span> To evaluate the goodness of our models, we used Spearman’s rank correlation, which is a Pearson correlation between the sorted values of two variables. It is more appropriate than Pearson’s correlation because it can measure non-linear relationships.</p>
     				<p class="explanation"><span class='bold'>Results:</span> Ultimately, we found that a 15-gram linear LASSO with LSA applied (100 components) produced the best model, yielding an accuracy of about <span style='color:red'>0.91</span>. We learned two main things in the model building phase: Non-reduced unigram models perform better when LSA is not employed. Also, LSA gives us increased performance in models with bigrams and above. This is probably because information is encoded in bigram models in ways that it is not for unigram models (e.g. it picks up on the difference between “not good” and “good”).</p>
     					<img class="illustration" width=600px src=graphs/ngram_comparison.png />
+    				<p class="explanation">Note that all of this analysis can be found in a <a href='https://github.com/noahyonack/AutomaticEssayGrading'>GitHub repository</a>. The final notebook can be found at `analysis/Automatic Essay Grading.ipynb`. It will use datasets found in `analysis/datasets/`.</p>
     		</div>
     </section>
     <section class="future" id="future">
